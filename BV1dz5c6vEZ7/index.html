@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#fff7f2">
+  <meta name="description" content="【宿敌恋人EP5】【EWB】侄女轻轻一卖就把我骗上钩了｜和我的台湾脸盲mami一起Re泰百系列">
+  <title>EP5 · 宿敌恋人 · Re 归档</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Literata:opsz,wght@7..72,500;7..72,700&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+:root {
+  --bg0: #fff7f2;
+  --bg1: #fde8df;
+  --ink: #3a2420;
+  --muted: #8a655c;
+  --line: rgba(90, 48, 40, 0.14);
+  --accent: #b85c4a;
+  --accent-soft: #f3d0c4;
+  --panel: rgba(255, 252, 249, 0.86);
+  --serif: "Literata", "Noto Serif SC", "Songti SC", serif;
+  --sans: "Noto Sans SC", "PingFang SC", "Hiragino Sans GB", sans-serif;
+  --page-pad: clamp(1rem, 4vw, 1.5rem);
+  --tap: 44px;
+}
+
+* { box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: 16px;
+  line-height: 1.6;
+  background:
+    radial-gradient(1200px 600px at 10% -10%, #ffe7dc 0%, transparent 55%),
+    radial-gradient(900px 500px at 100% 0%, #ffd9c8 0%, transparent 45%),
+    linear-gradient(180deg, var(--bg0), var(--bg1));
+  min-height: 100vh;
+  min-height: 100dvh;
+  -webkit-tap-highlight-color: rgba(184, 92, 74, 0.18);
+}
+
+.atmosphere {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    linear-gradient(rgba(255, 247, 242, 0.35) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 247, 242, 0.35) 1px, transparent 1px);
+  background-size: 42px 42px;
+  opacity: 0.35;
+  mask-image: linear-gradient(180deg, black, transparent 90%);
+}
+
+.page {
+  position: relative;
+  width: min(920px, 100%);
+  margin: 0 auto;
+  padding:
+    calc(1.5rem + env(safe-area-inset-top, 0px))
+    calc(var(--page-pad) + env(safe-area-inset-right, 0px))
+    calc(3rem + env(safe-area-inset-bottom, 0px))
+    calc(var(--page-pad) + env(safe-area-inset-left, 0px));
+}
+
+.brand {
+  font-family: var(--serif);
+  font-size: clamp(1.9rem, 8vw, 3.4rem);
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  line-height: 1.18;
+  margin: 0 0 0.75rem;
+  overflow-wrap: anywhere;
+}
+
+.lede {
+  margin: 0;
+  max-width: 34rem;
+  color: var(--muted);
+  font-size: clamp(0.98rem, 3.6vw, 1.05rem);
+  line-height: 1.7;
+}
+
+.meta-line {
+  margin: 1.1rem 0 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.episode-list {
+  list-style: none;
+  margin: 2rem 0 0;
+  padding: 0;
+  border-top: 1px solid var(--line);
+}
+
+.episode-list li {
+  border-bottom: 1px solid var(--line);
+}
+
+.episode-list a {
+  display: grid;
+  grid-template-columns: 4.5rem 1fr auto;
+  gap: 0.85rem 1rem;
+  align-items: baseline;
+  min-height: var(--tap);
+  padding: 1.05rem 0.1rem;
+  color: inherit;
+  text-decoration: none;
+  transition: color 180ms ease;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .episode-list a {
+    transition: transform 180ms ease, color 180ms ease;
+  }
+  .episode-list a:hover {
+    color: var(--accent);
+    transform: translateX(4px);
+  }
+}
+
+.ep-label {
+  font-family: var(--serif);
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.ep-title {
+  font-size: 1.02rem;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+
+.ep-stats {
+  color: var(--muted);
+  font-size: 0.88rem;
+  white-space: nowrap;
+}
+
+.topnav {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.topnav a {
+  display: inline-flex;
+  align-items: center;
+  min-height: var(--tap);
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .topnav a:hover { border-bottom-color: var(--accent); }
+}
+
+.jump-nav {
+  display: flex;
+  gap: 0.6rem;
+  margin: 1.25rem 0 0;
+  position: sticky;
+  top: calc(0.4rem + env(safe-area-inset-top, 0px));
+  z-index: 5;
+  padding: 0.35rem 0;
+  background: linear-gradient(180deg, rgba(255, 247, 242, 0.96), rgba(255, 247, 242, 0.88));
+  backdrop-filter: blur(8px);
+}
+
+.jump-nav a {
+  flex: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: var(--tap);
+  padding: 0.55rem 0.75rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: var(--ink);
+  text-decoration: none;
+  background: var(--panel);
+  font-size: 0.95rem;
+}
+
+.jump-nav a:active {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.video-hero h1 {
+  font-family: var(--serif);
+  font-size: clamp(1.35rem, 5.5vw, 2.3rem);
+  line-height: 1.35;
+  margin: 0 0 0.85rem;
+  overflow-wrap: anywhere;
+}
+
+.video-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem 0.85rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.video-meta a {
+  color: var(--accent);
+  display: inline-flex;
+  align-items: center;
+  min-height: 2rem;
+}
+
+.section {
+  margin-top: 2rem;
+  scroll-margin-top: calc(4.5rem + env(safe-area-inset-top, 0px));
+}
+
+.section h2 {
+  font-family: var(--serif);
+  font-size: clamp(1.15rem, 4.5vw, 1.35rem);
+  margin: 0 0 0.9rem;
+  padding-bottom: 0.55rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.comment-list,
+.replies,
+.danmaku-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.comment {
+  padding: 0.95rem 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.comment:last-child { border-bottom: 0; }
+
+.replies {
+  margin: 0.7rem 0 0 0.75rem;
+  padding-left: 0.85rem;
+  border-left: 2px solid var(--accent-soft);
+}
+
+.reply {
+  border-bottom: 0;
+  padding: 0.65rem 0;
+}
+
+.comment-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 0.75rem;
+  margin-bottom: 0.35rem;
+  font-size: 0.86rem;
+  color: var(--muted);
+}
+
+.uname {
+  color: var(--ink);
+  font-weight: 500;
+}
+
+.like { color: var(--accent); }
+
+.comment-body {
+  line-height: 1.7;
+  white-space: normal;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+.danmaku-list li {
+  display: grid;
+  grid-template-columns: 3.6rem 1fr;
+  gap: 0.7rem;
+  padding: 0.6rem 0;
+  border-bottom: 1px dashed var(--line);
+  line-height: 1.55;
+  align-items: start;
+}
+
+.danmaku-list .time {
+  font-variant-numeric: tabular-nums;
+  color: var(--accent);
+  font-weight: 500;
+  font-size: 0.92rem;
+  padding-top: 0.08rem;
+}
+
+.danmaku-list .text {
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+.empty {
+  color: var(--muted);
+}
+
+.site-footer {
+  margin-top: 3rem;
+  padding-top: 1.15rem;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 0.82rem;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+@media (max-width: 720px) {
+  .page {
+    padding-top: calc(1.15rem + env(safe-area-inset-top, 0px));
+    padding-bottom: calc(2.4rem + env(safe-area-inset-bottom, 0px));
+  }
+
+  .episode-list {
+    margin-top: 1.5rem;
+  }
+
+  .episode-list a {
+    grid-template-columns: 3.2rem 1fr;
+    grid-template-areas:
+      "label title"
+      "label stats";
+    gap: 0.2rem 0.75rem;
+    padding: 1rem 0;
+  }
+
+  .ep-label {
+    grid-area: label;
+    padding-top: 0.15rem;
+    font-size: 1.05rem;
+  }
+
+  .ep-title {
+    grid-area: title;
+    font-size: 1rem;
+  }
+
+  .ep-stats {
+    grid-area: stats;
+    white-space: normal;
+    font-size: 0.84rem;
+  }
+
+  .video-meta {
+    gap: 0.35rem 0.7rem;
+  }
+
+  .replies {
+    margin-left: 0.15rem;
+    padding-left: 0.7rem;
+  }
+
+  .danmaku-list li {
+    grid-template-columns: 3.2rem 1fr;
+    gap: 0.55rem;
+  }
+
+  .comment-body,
+  .danmaku-list .text {
+    font-size: 0.98rem;
+  }
+}
+
+@media (max-width: 420px) {
+  .brand {
+    font-size: clamp(1.7rem, 9vw, 2.2rem);
+  }
+
+  .jump-nav {
+    gap: 0.45rem;
+  }
+
+  .jump-nav a {
+    font-size: 0.9rem;
+    padding: 0.5rem 0.55rem;
+  }
+}
+
+  </style>
+</head>
+<body>
+  <div class="atmosphere" aria-hidden="true"></div>
+  <div class="page">
+    
+    <nav class="topnav">
+      <a href="../index.html">← 返回目录</a>
+      <span>EP5</span>
+    </nav>
+    <header class="video-hero">
+      <h1>【宿敌恋人EP5】【EWB】侄女轻轻一卖就把我骗上钩了｜和我的台湾脸盲mami一起Re泰百系列</h1>
+      <ul class="video-meta">
+        <li>BV1dz5c6vEZ7</li>
+        <li>UP 密西西比bear</li>
+        <li>发布 2026-06-01 19:07 UTC</li>
+        <li><a href="https://www.bilibili.com/video/BV1dz5c6vEZ7/" rel="noopener noreferrer" target="_blank">打开 B 站</a></li>
+        <li>21 评论 · 45 弹幕</li>
+      </ul>
+      <nav class="jump-nav" aria-label="页面章节">
+        <a href="#comments">评论 21</a>
+        <a href="#danmaku">弹幕 45</a>
+      </nav>
+    </header>
+    <section class="section" id="comments">
+      <h2>评论</h2>
+      <ol class="comment-list">
+<li class="comment">
+<div class="comment-meta">
+        <span class="uname">@密西西比bear</span>
+        <span class="when">2026-06-01 19:18 UTC</span>
+        
+        <span class="sr-only">评论</span>
+      </div>
+      <div class="comment-body">大家好！鉴于最近收到很多粉丝的评论说想看EWB，所以这次邀请到了我的台湾mami和我一起看～ 我俩一个脸盲，一个全程把主演的名字都讲错了&lt;3 或许也是本系列特色吧。。。 EWB我个人觉得是不需要严肃分析的，是一部在欢声笑语中就可以轻松看完的片子，希望大家喜欢！</div>
+</li>
+<li class="comment">
+<div class="comment-meta">
+        <span class="uname">@花小道</span>
+        <span class="when">2026-06-01 19:50 UTC</span>
+        
+        <span class="sr-only">评论</span>
+      </div>
+      <div class="comment-body">来支持一下[星星眼]</div>
+<ol class="replies">
+<li class="comment reply">
+<div class="comment-meta">
+        <span class="uname">@密西西比bear</span>
+        <span class="when">2026-06-01 20:09 UTC</span>
+        
+        <span class="sr-only">楼中楼</span>
+      </div>
+      <div class="comment-body">欢迎！</div>
+</li>
+<li class="comment reply">
+<div class="comment-meta">
+        <span class="uname">@花小道</span>
+        <span class="when">2026-06-01 20:39 UTC</span>
+        <span class="like">♡ 1</span>
+        <span class="sr-only">楼中楼</span>
+      </div>
+      <div class="comment-body">看完了投币支持，你们理性脑感性脑两方面分析的很全面啦，也对剧中吵架部分我感觉疑惑的地方做出了逻辑解释</div>
+</li>
+<li class="comment reply">
+<div class="comment-meta">
+        <span class="uname">@密西西比bear</span>
+        <span class="when">2026-06-01 20:53 UTC</span>
+        
+        <span class="sr-only">楼中楼</span>
+      </div>
+      <div class="comment-body">回复 @花小道 : 好高的评价！谢谢你！我首页也有女孩规则的re，如果还没看，可以看看哈哈哈</div>
+</li>
+<li class="comment reply">
+<div class="comment-meta">
+        <span class="uname">@密西西比bear</span>
+        <span class="when">2026-06-23 13:54 UTC</span>
+        
+        <span class="sr-only">楼中楼</span>
+      </div>
+      <div class="comment-body">hi你好 刚刚发布了最新集的re 感兴趣可以看看～</div>
+</li>
+</ol>
+</li>
+<li class="comment">
+<div class="comment-meta">
+        <span class="uname">@琥珀晨星</span>
+        <span class="when">2026-06-03 00:07 UTC</span>
+        <span class="like">♡ 1</span>
+        <span class="sr-only">评论</span>
+      </div>
+      <div class="comment-body">来支持！</div>
+<ol class="replies">
+<li class="comment reply">
+<div class="comment-meta">
+        <span class="uname">@密西西比bear</span>
+        <span class="when">2026-06-03 00:57 UTC</span>
+        
+        <span class="sr-only">楼中楼</span>
+      </div>
+      <div class="comment-body">回复 @琥珀晨星 :感谢！！</div>
+</li>
+</ol>
+</li>
+<li class="comment">
+<div class="comment-meta">
+        <span class="uname">@心羊sone</span>
+        <span class="when">2026-06-03 14:58 UTC</span>
+        
+        <span class="sr-only">评论</span>
+      </div>
+      <div class="comment-body">宿敌恋人我来了[打call][打call][打call]</div>
+<ol class="replies">
+<li class="comment reply">
+<div class="comment-meta">
+        <span class="uname">@密西西比bear</span>
+        <span class="when">2026-06-03 23:01 UTC</span>
+        
+        <span class="sr-only">楼中楼</span>
+      </div>
+      <div class="comment-body">热烈欢迎👏</div>
+</li>
+</ol>
+</li>
+<li class="comment">
+<div class="comment-meta">
+        <span class="uname">@苏缪喵喵喵</span>
+        <span class="when">2026-06-04 00:36 UTC</span>
+        
+        <span class="sr-only">评论</span>
+      </div>
+      <div class="comment-body">[笑哭]中间去翻译给我笑到了。</div>
+<ol class="replies">
+<li class="comment reply">
+<div class="comment-meta">
+        <span class="uname">@密西西比bear</span>
+        <span class="when">2026-06-04 02:18 UTC</span>
+        
+        <span class="sr-only">楼中楼</span>
+      </div>
+      <div class="comment-body">哈哈哈哈真的很莫名其妙</div>
+</li>
+<li class="comment reply">
+<div class="comment-meta">
+        <span class="uname">@苏缪喵喵喵</span>
+        <span class="when">2026-06-04 13:58 UTC</span>
+        
+        <span class="sr-only">楼中楼</span>
+      </div>
+      <div class="comment-body">回复 @密西西比bear :没事的 我也很莫名其妙 我后面直接档博客听到一份二十秒 笑死</div>
+</li>
+<li class="comment reply">
+<div class="comment-meta">
+        <span class="uname">@苏缪喵喵喵</span>
+        <span class="when">2026-06-04 14:01 UTC</span>
+        
+        <span class="sr-only">楼中楼</span>
+      </div>
+      <div class="comment-body">回复 @苏缪喵喵喵 : 啊不对 是一小时 二十分 我还是在车上听的 我当时还琢磨 怎么中场休息就开始到催眠环节了[笑哭]</div>
+</li>
+<li class="comment reply">
+<div class="comment-meta">
+        <span class="uname">@密西西比bear</span>
+        <span class="when">2026-06-05 02:21 UTC</span>
+        
+        <span class="sr-only">楼中楼</span>
+      </div>
+      <div class="comment-body">回复 @苏缪喵喵喵 : 哈哈哈哈哈哈哈我首页还有和别的朋友re女孩规则，我觉得那个也很适合当播客，我们是脱口秀+学术研究风格</div>
+</li>
+<li class="comment reply">
+<div class="comment-meta">
+        <span class="uname">@苏缪喵喵喵</span>
+        <span class="when">2026-06-05 08:27 UTC</span>
+        
+        <span class="sr-only">楼中楼</span>
+      </div>
+      <div class="comment-body">回复 @密西西比bear :等有有空下上班儿路上听，感觉很适合当博客听[笑哭]</div>
+</li>
+<li class="comment reply">
+<div class="comment-meta">
+        <span class="uname">@密西西比bear</span>
+        <span class="when">2026-06-23 12:42 UTC</span>
+        
+        <span class="sr-only">楼中楼</span>
+      </div>
+      <div class="comment-body">回复 @苏缪喵喵喵 :hi 我刚刚更新了最新的ep8 感兴趣可以看看～</div>
+</li>
+<li class="comment reply">
+<div class="comment-meta">
+        <span class="uname">@苏缪喵喵喵</span>
+        <span class="when">2026-06-23 13:06 UTC</span>
+        
+        <span class="sr-only">楼中楼</span>
+      </div>
+      <div class="comment-body">回复 @密西西比bear : [笑哭]8我不敢看 但是我看到更新6了，准备到时候趟床上看了，看不清就明天路上档播客听</div>
+</li>
+</ol>
+</li>
+<li class="comment">
+<div class="comment-meta">
+        <span class="uname">@吴邪三叔1</span>
+        <span class="when">2026-08-22 12:07 UTC</span>
+        
+        <span class="sr-only">评论</span>
+      </div>
+      <div class="comment-body">我只是觉得吧，这件事是lal因为信任和wine说了。我和你说的秘密，你没有经过我的同意就上报了，我会觉得你不尊重我。</div>
+</li>
+<li class="comment">
+<div class="comment-meta">
+        <span class="uname">@捏大睡</span>
+        <span class="when">2026-09-05 16:04 UTC</span>
+        
+        <span class="sr-only">评论</span>
+      </div>
+      <div class="comment-body">为什么没有前五集啊🤔️</div>
+<ol class="replies">
+<li class="comment reply">
+<div class="comment-meta">
+        <span class="uname">@密西西比bear</span>
+        <span class="when">2026-09-05 16:22 UTC</span>
+        
+        <span class="sr-only">楼中楼</span>
+      </div>
+      <div class="comment-body">因为一起录re的想法是从第五集才有的😭</div>
+</li>
+</ol>
+</li>
+</ol>
+    </section>
+    <section class="section" id="danmaku">
+      <h2>弹幕</h2>
+      <ol class="danmaku-list">
+<li><span class="time">00:09</span><span class="text">哇，追完女孩规则就来追这部，和up同步了</span></li>
+<li><span class="time">01:31</span><span class="text">没啊我们小爱爱一米五六哈哈</span></li>
+<li><span class="time">02:35</span><span class="text">哈哈哈哈哈哈</span></li>
+<li><span class="time">04:43</span><span class="text">没看过前面吗</span></li>
+<li><span class="time">04:48</span><span class="text">上一集和proud出去了呀</span></li>
+<li><span class="time">05:07</span><span class="text">up在台湾mami面前会比较小屁孩一点易燃易爆炸 大家见谅～</span></li>
+<li><span class="time">06:26</span><span class="text">记住你这句话 ep8大虐特虐了</span></li>
+<li><span class="time">06:46</span><span class="text">滤镜+打光=变色 哈哈哈哈哈</span></li>
+<li><span class="time">07:28</span><span class="text">玉米六和玉米五（）</span></li>
+<li><span class="time">07:42</span><span class="text">173和174哦</span></li>
+<li><span class="time">11:31</span><span class="text">hero亖了（飞天缓速旋转）</span></li>
+<li><span class="time">11:42</span><span class="text">哈哈哈哈哈 只在关心植物 没有关心lal吗</span></li>
+<li><span class="time">14:10</span><span class="text">有反差感就很戳</span></li>
+<li><span class="time">14:52</span><span class="text">两个人斗嘴好好玩儿 哈哈哈哈</span></li>
+<li><span class="time">16:35</span><span class="text">该不会是像日本的与田祐希吧</span></li>
+<li><span class="time">16:35</span><span class="text">我听过</span></li>
+<li><span class="time">16:36</span><span class="text">有像有像！</span></li>
+<li><span class="time">18:04</span><span class="text">这都没有看出来吗？这脸盲得也太厉害了，是两个人</span></li>
+<li><span class="time">18:21</span><span class="text">醉倒的是另一个同事</span></li>
+<li><span class="time">19:47</span><span class="text">卡姐冰妹，从pluto到gr再到 ewb，但愿这次能迎来圆满的结局</span></li>
+<li><span class="time">24:55</span><span class="text">火龙果是因为有很多籽，说他心眼多</span></li>
+<li><span class="time">26:28</span><span class="text">b有很多不打码的</span></li>
+<li><span class="time">27:31</span><span class="text">有品</span></li>
+<li><span class="time">28:46</span><span class="text">各方面平衡的比较好</span></li>
+<li><span class="time">29:31</span><span class="text">表面上极力维护wine，实则也在拼命隐藏自己hhhh</span></li>
+<li><span class="time">35:40</span><span class="text">夺笋啊哈哈哈哈哈</span></li>
+<li><span class="time">43:36</span><span class="text">我笑出声了hhhh我们gr何德何能啊（）</span></li>
+<li><span class="time">43:40</span><span class="text">没事没事，gr剪辑比ewb拉（）</span></li>
+<li><span class="time">43:50</span><span class="text">这里没什么问题啊？展现人物价值观而已</span></li>
+<li><span class="time">45:22</span><span class="text">用尽伤人的话去说～～～</span></li>
+<li><span class="time">46:14</span><span class="text">的确，这个角度未曾想过诶</span></li>
+<li><span class="time">46:17</span><span class="text">对哦，其实wine说会更好</span></li>
+<li><span class="time">46:57</span><span class="text">按时间线看俩人现在也没认识多久，还是需要了解磨合</span></li>
+<li><span class="time">51:46</span><span class="text">倒也不是，卡冰身高配置和牛爱差不多，love也就比张继思高0.01m</span></li>
+<li><span class="time">51:57</span><span class="text">Love长的好看</span></li>
+<li><span class="time">53:40</span><span class="text">是的 就是她俩唱的哦 有4首 2首合唱2首各自单人哦</span></li>
+<li><span class="time">54:14</span><span class="text">公司还是有女团的呦</span></li>
+<li><span class="time">54:15</span><span class="text">张继思、派派林、叶芷妤之前是GMM的一个女团的成员</span></li>
+<li><span class="time">54:28</span><span class="text">另外一对cp同时也是女团</span></li>
+<li><span class="time">58:59</span><span class="text">如果她和p交往就不会和lan炮了</span></li>
+<li><span class="time">59:05</span><span class="text">糯米翻译比较好，说是如果她跟proud交往的话，是不会同时跟人做py的</span></li>
+<li><span class="time">60:35</span><span class="text">很有意思啊哈哈哈哈哈</span></li>
+<li><span class="time">64:39</span><span class="text">哈哈哈哈哈 大家都在关注吃饭这件事也</span></li>
+<li><span class="time">67:12</span><span class="text">尔多隆（）</span></li>
+<li><span class="time">70:21</span><span class="text">我也以为这男的还得多膈应两集才走</span></li>
+</ol>
+    </section>
+    
+    <footer class="site-footer">
+      <p>宿敌恋人 · Re 归档 · 由 bili-archive 自动生成</p>
+    </footer>
+  </div>
+</body>
+</html>
