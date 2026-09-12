@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#fff7f2">
+  <meta name="description" content="【宿敌恋人EP7】【EWB】就这么无奖竞猜编剧下一秒要写啥｜和我的台湾脸盲mami一起Re泰百系列">
+  <title>EP7 · 宿敌恋人 · Re 归档</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Literata:opsz,wght@7..72,500;7..72,700&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+:root {
+  --bg0: #fff7f2;
+  --bg1: #fde8df;
+  --ink: #3a2420;
+  --muted: #8a655c;
+  --line: rgba(90, 48, 40, 0.14);
+  --accent: #b85c4a;
+  --accent-soft: #f3d0c4;
+  --panel: rgba(255, 252, 249, 0.86);
+  --serif: "Literata", "Noto Serif SC", "Songti SC", serif;
+  --sans: "Noto Sans SC", "PingFang SC", "Hiragino Sans GB", sans-serif;
+  --page-pad: clamp(1rem, 4vw, 1.5rem);
+  --tap: 44px;
+}
+
+* { box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: 16px;
+  line-height: 1.6;
+  background:
+    radial-gradient(1200px 600px at 10% -10%, #ffe7dc 0%, transparent 55%),
+    radial-gradient(900px 500px at 100% 0%, #ffd9c8 0%, transparent 45%),
+    linear-gradient(180deg, var(--bg0), var(--bg1));
+  min-height: 100vh;
+  min-height: 100dvh;
+  -webkit-tap-highlight-color: rgba(184, 92, 74, 0.18);
+}
+
+.atmosphere {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    linear-gradient(rgba(255, 247, 242, 0.35) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 247, 242, 0.35) 1px, transparent 1px);
+  background-size: 42px 42px;
+  opacity: 0.35;
+  mask-image: linear-gradient(180deg, black, transparent 90%);
+}
+
+.page {
+  position: relative;
+  width: min(920px, 100%);
+  margin: 0 auto;
+  padding:
+    calc(1.5rem + env(safe-area-inset-top, 0px))
+    calc(var(--page-pad) + env(safe-area-inset-right, 0px))
+    calc(3rem + env(safe-area-inset-bottom, 0px))
+    calc(var(--page-pad) + env(safe-area-inset-left, 0px));
+}
+
+.brand {
+  font-family: var(--serif);
+  font-size: clamp(1.9rem, 8vw, 3.4rem);
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  line-height: 1.18;
+  margin: 0 0 0.75rem;
+  overflow-wrap: anywhere;
+}
+
+.lede {
+  margin: 0;
+  max-width: 34rem;
+  color: var(--muted);
+  font-size: clamp(0.98rem, 3.6vw, 1.05rem);
+  line-height: 1.7;
+}
+
+.meta-line {
+  margin: 1.1rem 0 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.episode-list {
+  list-style: none;
+  margin: 2rem 0 0;
+  padding: 0;
+  border-top: 1px solid var(--line);
+}
+
+.episode-list li {
+  border-bottom: 1px solid var(--line);
+}
+
+.episode-list a {
+  display: grid;
+  grid-template-columns: 4.5rem 1fr auto;
+  gap: 0.85rem 1rem;
+  align-items: baseline;
+  min-height: var(--tap);
+  padding: 1.05rem 0.1rem;
+  color: inherit;
+  text-decoration: none;
+  transition: color 180ms ease;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .episode-list a {
+    transition: transform 180ms ease, color 180ms ease;
+  }
+  .episode-list a:hover {
+    color: var(--accent);
+    transform: translateX(4px);
+  }
+}
+
+.ep-label {
+  font-family: var(--serif);
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.ep-title {
+  font-size: 1.02rem;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+
+.ep-stats {
+  color: var(--muted);
+  font-size: 0.88rem;
+  white-space: nowrap;
+}
+
+.topnav {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.topnav a {
+  display: inline-flex;
+  align-items: center;
+  min-height: var(--tap);
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .topnav a:hover { border-bottom-color: var(--accent); }
+}
+
+.jump-nav {
+  display: flex;
+  gap: 0.6rem;
+  margin: 1.25rem 0 0;
+  position: sticky;
+  top: calc(0.4rem + env(safe-area-inset-top, 0px));
+  z-index: 5;
+  padding: 0.35rem 0;
+  background: linear-gradient(180deg, rgba(255, 247, 242, 0.96), rgba(255, 247, 242, 0.88));
+  backdrop-filter: blur(8px);
+}
+
+.jump-nav a {
+  flex: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: var(--tap);
+  padding: 0.55rem 0.75rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: var(--ink);
+  text-decoration: none;
+  background: var(--panel);
+  font-size: 0.95rem;
+}
+
+.jump-nav a:active {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.video-hero h1 {
+  font-family: var(--serif);
+  font-size: clamp(1.35rem, 5.5vw, 2.3rem);
+  line-height: 1.35;
+  margin: 0 0 0.85rem;
+  overflow-wrap: anywhere;
+}
+
+.video-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem 0.85rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.video-meta a {
+  color: var(--accent);
+  display: inline-flex;
+  align-items: center;
+  min-height: 2rem;
+}
+
+.section {
+  margin-top: 2rem;
+  scroll-margin-top: calc(4.5rem + env(safe-area-inset-top, 0px));
+}
+
+.section h2 {
+  font-family: var(--serif);
+  font-size: clamp(1.15rem, 4.5vw, 1.35rem);
+  margin: 0 0 0.9rem;
+  padding-bottom: 0.55rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.comment-list,
+.replies,
+.danmaku-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.comment {
+  padding: 0.95rem 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.comment:last-child { border-bottom: 0; }
+
+.replies {
+  margin: 0.7rem 0 0 0.75rem;
+  padding-left: 0.85rem;
+  border-left: 2px solid var(--accent-soft);
+}
+
+.reply {
+  border-bottom: 0;
+  padding: 0.65rem 0;
+}
+
+.comment-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 0.75rem;
+  margin-bottom: 0.35rem;
+  font-size: 0.86rem;
+  color: var(--muted);
+}
+
+.uname {
+  color: var(--ink);
+  font-weight: 500;
+}
+
+.like { color: var(--accent); }
+
+.comment-body {
+  line-height: 1.7;
+  white-space: normal;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+.danmaku-list li {
+  display: grid;
+  grid-template-columns: 3.6rem 1fr;
+  gap: 0.7rem;
+  padding: 0.6rem 0;
+  border-bottom: 1px dashed var(--line);
+  line-height: 1.55;
+  align-items: start;
+}
+
+.danmaku-list .time {
+  font-variant-numeric: tabular-nums;
+  color: var(--accent);
+  font-weight: 500;
+  font-size: 0.92rem;
+  padding-top: 0.08rem;
+}
+
+.danmaku-list .text {
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+.empty {
+  color: var(--muted);
+}
+
+.site-footer {
+  margin-top: 3rem;
+  padding-top: 1.15rem;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 0.82rem;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+@media (max-width: 720px) {
+  .page {
+    padding-top: calc(1.15rem + env(safe-area-inset-top, 0px));
+    padding-bottom: calc(2.4rem + env(safe-area-inset-bottom, 0px));
+  }
+
+  .episode-list {
+    margin-top: 1.5rem;
+  }
+
+  .episode-list a {
+    grid-template-columns: 3.2rem 1fr;
+    grid-template-areas:
+      "label title"
+      "label stats";
+    gap: 0.2rem 0.75rem;
+    padding: 1rem 0;
+  }
+
+  .ep-label {
+    grid-area: label;
+    padding-top: 0.15rem;
+    font-size: 1.05rem;
+  }
+
+  .ep-title {
+    grid-area: title;
+    font-size: 1rem;
+  }
+
+  .ep-stats {
+    grid-area: stats;
+    white-space: normal;
+    font-size: 0.84rem;
+  }
+
+  .video-meta {
+    gap: 0.35rem 0.7rem;
+  }
+
+  .replies {
+    margin-left: 0.15rem;
+    padding-left: 0.7rem;
+  }
+
+  .danmaku-list li {
+    grid-template-columns: 3.2rem 1fr;
+    gap: 0.55rem;
+  }
+
+  .comment-body,
+  .danmaku-list .text {
+    font-size: 0.98rem;
+  }
+}
+
+@media (max-width: 420px) {
+  .brand {
+    font-size: clamp(1.7rem, 9vw, 2.2rem);
+  }
+
+  .jump-nav {
+    gap: 0.45rem;
+  }
+
+  .jump-nav a {
+    font-size: 0.9rem;
+    padding: 0.5rem 0.55rem;
+  }
+}
+
+  </style>
+</head>
+<body>
+  <div class="atmosphere" aria-hidden="true"></div>
+  <div class="page">
+    
+    <nav class="topnav">
+      <a href="../index.html">← 返回目录</a>
+      <span>EP7</span>
+    </nav>
+    <header class="video-hero">
+      <h1>【宿敌恋人EP7】【EWB】就这么无奖竞猜编剧下一秒要写啥｜和我的台湾脸盲mami一起Re泰百系列</h1>
+      <ul class="video-meta">
+        <li>BV1X77q6MEDX</li>
+        <li>UP 密西西比bear</li>
+        <li>发布 2026-06-26 03:35 UTC</li>
+        <li><a href="https://www.bilibili.com/video/BV1X77q6MEDX/" rel="noopener noreferrer" target="_blank">打开 B 站</a></li>
+        <li>9 评论 · 3 弹幕</li>
+      </ul>
+      <nav class="jump-nav" aria-label="页面章节">
+        <a href="#comments">评论 9</a>
+        <a href="#danmaku">弹幕 3</a>
+      </nav>
+    </header>
+    <section class="section" id="comments">
+      <h2>评论</h2>
+      <ol class="comment-list">
+<li class="comment">
+<div class="comment-meta">
+        <span class="uname">@密西西比bear</span>
+        <span class="when">2026-06-26 04:24 UTC</span>
+        <span class="like">♡ 1</span>
+        <span class="sr-only">评论</span>
+      </div>
+      <div class="comment-body">大家好！终于剪完了ep7，在ep8的冲击下，ep7显得格外纯良好看。。。 镜头语言在线，剧情节奏也是轻快明朗，我和台湾mami都看得很开心，希望大家喜欢～ 片头bgm私心用了很喜欢的candy kisses，出自莫文蔚，歌词里的那句“不得了，谁比你更重要” 我觉得十分契合拉拉琳本集心情哈哈哈哈</div>
+</li>
+<li class="comment">
+<div class="comment-meta">
+        <span class="uname">@知妍兮</span>
+        <span class="when">2026-06-26 05:13 UTC</span>
+        <span class="like">♡ 1</span>
+        <span class="sr-only">评论</span>
+      </div>
+      <div class="comment-body">哈哈哈哈 先码再看</div>
+<ol class="replies">
+<li class="comment reply">
+<div class="comment-meta">
+        <span class="uname">@密西西比bear</span>
+        <span class="when">2026-06-26 05:38 UTC</span>
+        
+        <span class="sr-only">楼中楼</span>
+      </div>
+      <div class="comment-body">回复 @知妍兮 :欢迎欢迎 热烈欢迎</div>
+</li>
+</ol>
+</li>
+<li class="comment">
+<div class="comment-meta">
+        <span class="uname">@爱女女百合女女les</span>
+        <span class="when">2026-06-26 09:55 UTC</span>
+        <span class="like">♡ 1</span>
+        <span class="sr-only">评论</span>
+      </div>
+      <div class="comment-body">来咯[星星眼][星星眼][星星眼][星星眼][星星眼]</div>
+<ol class="replies">
+<li class="comment reply">
+<div class="comment-meta">
+        <span class="uname">@密西西比bear</span>
+        <span class="when">2026-06-26 09:59 UTC</span>
+        
+        <span class="sr-only">楼中楼</span>
+      </div>
+      <div class="comment-body">欢迎啊啊啊啊</div>
+</li>
+</ol>
+</li>
+<li class="comment">
+<div class="comment-meta">
+        <span class="uname">@花小道</span>
+        <span class="when">2026-06-26 19:19 UTC</span>
+        
+        <span class="sr-only">评论</span>
+      </div>
+      <div class="comment-body">来了，想必ep8已经re完了吧，感觉可以跟ep9一起发出来哦</div>
+<ol class="replies">
+<li class="comment reply">
+<div class="comment-meta">
+        <span class="uname">@密西西比bear</span>
+        <span class="when">2026-06-26 22:36 UTC</span>
+        
+        <span class="sr-only">楼中楼</span>
+      </div>
+      <div class="comment-body">hii ep8已经出来了就在合集的第一集，也可以点进我主页～</div>
+</li>
+</ol>
+</li>
+<li class="comment">
+<div class="comment-meta">
+        <span class="uname">@骂我就骂回去</span>
+        <span class="when">2026-06-26 22:05 UTC</span>
+        <span class="like">♡ 2</span>
+        <span class="sr-only">评论</span>
+      </div>
+      <div class="comment-body">留爪，上班看[吃瓜]</div>
+<ol class="replies">
+<li class="comment reply">
+<div class="comment-meta">
+        <span class="uname">@密西西比bear</span>
+        <span class="when">2026-06-26 22:36 UTC</span>
+        
+        <span class="sr-only">楼中楼</span>
+      </div>
+      <div class="comment-body">哈哈哈哈哈支持！</div>
+</li>
+</ol>
+</li>
+</ol>
+    </section>
+    <section class="section" id="danmaku">
+      <h2>弹幕</h2>
+      <ol class="danmaku-list">
+<li><span class="time">03:30</span><span class="text">咦这个没有原片的声音</span></li>
+<li><span class="time">04:01</span><span class="text">我支持轮流</span></li>
+<li><span class="time">05:25</span><span class="text">心动的眼神 我好像聋了</span></li>
+</ol>
+    </section>
+    
+    <footer class="site-footer">
+      <p>宿敌恋人 · Re 归档 · 由 bili-archive 自动生成</p>
+    </footer>
+  </div>
+</body>
+</html>
